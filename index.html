@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brian 'BZ' Jutz - Music Metadata Specialist, Brand Architect, and Creative Director.">
+  <title>Brian "BZ" Jutz | Metadata Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #002880;
+      --secondary: #0041a8;
+      --light: #dddddd;
+      --light-gray: #eeeeee;
+      --dark: #111;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, var(--light), var(--light-gray));
+      color: var(--dark);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    body.dark-mode {
+      background: #0e0e0e;
+      color: #f5f5f5;
+    }
+    header {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      text-align: center;
+      padding: 4rem 2rem;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      position: relative;
+      animation: fadeInDown 1s ease forwards;
+    }
+    header:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+    header img {
+      width: 100px;
+      display: block;
+      margin: 0 auto 1rem;
+      animation: fadeInDown 1s ease 0.3s forwards;
+      opacity: 0;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      opacity: 0;
+      animation: fadeInDown 1s ease 0.5s forwards;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    header p {
+      margin: 0.5rem 0 0;
+      font-size: 1.2rem;
+      opacity: 0;
+      animation: fadeInUp 1s ease 0.7s forwards;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+    }
+    @keyframes fadeInDown { from {opacity:0; transform:translateY(-20px);} to {opacity:1; transform:translateY(0);} }
+    @keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+    main { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+    section {
+      margin-bottom: 3rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: appear 0.6s ease forwards;
+    }
+    section:nth-child(odd) { animation-delay: 0.2s; }
+    section:nth-child(even) { animation-delay: 0.4s; }
+    @keyframes appear { to {opacity:1; transform:translateY(0);} }
+    h2 {
+      font-family: monospace;
+      background: #fff;
+      border: 2px inset var(--light-gray);
+      padding: 0.5rem 1rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+      width: 50%;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: box-shadow 0.3s;
+    }
+    h2:hover { box-shadow: 0 0 8px rgba(0,91,234,0.5); }
+    .project {
+      background: #f9f9f9;
+      border: 2px inset var(--light-gray);
+      padding: 1.5rem;
+      border-radius: 6px;
+      font-family: monospace;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    .video-scroll {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem 0;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+    .video-scroll iframe,
+    .video-scroll img {
+      flex: 0 0 auto;
+      width: 360px;
+      height: 220px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: none;
+      transition: transform 0.3s ease;
+    }
+    .video-scroll iframe:hover,
+    .video-scroll img:hover { transform: scale(1.05); }
+    .button-bar { text-align: center; margin: 2rem 0; }
+    .button-bar button,
+    .button-bar a {
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .button-bar button:hover,
+    .button-bar a:hover { transform: translateY(-2px); background: var(--secondary); }
+    footer { text-align: center; padding: 1rem; background: var(--primary); color: #fff; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://raw.githubusercontent.com/TheBeatMobMedia/TheBeatMobMedia/main/Transparent%20Before%20After%20TBM%20Logo%20(1).png?raw=true" alt="The Beat Mob Logo">
+    <h1>Brian "BZ" Jutz</h1>
+    <p>Metadata Expert | Creative Strategist | Digital Asset Architect</p>
+  </header>
+  <main>
+    <div class="button-bar">
+      <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark-mode')">☯</button>
+      <a href="resume.pdf" download>Download Resume</a>
+    </div>
+    <section>
+      <h2>About Me</h2>
+      <div class="project">
+        <p>Two decades deep in the music industry, I specialize in metadata optimization, digital asset management, and creative strategy. I'm the founder of The Beat Mob, an independent creative and production brand built to serve as a full-stack content hub for artists—handling everything from beat licensing and artwork to metadata submission and campaign rollout. My metadata work ensures accurate royalty tracking, seamless platform ingestion, and discoverability across DSPs.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Core Competencies</h2>
+      <div class="project">
+        <ul>
+          <li>Cross-functional Communication (Artists, A&Rs, Engineers, Developers)</li>
+          <li>Workflow Development (from raw files to DSP-ready packages)</li>
+          <li>Metadata Encoding & QC (DDEX, CWR, ISRC, UPC, WAV tagging)</li>
+          <li>Digital Distribution Prep (DistroKid, TuneCore, LabelGrid, and platform-ready metadata formats)</li>
+          <li>Audio Engineering (Vocal production, mixing/mastering)</li>
+          <li>Visual & Motion Branding (Cover art, social rollout assets)</li>
+          <li>Catalog Management & Asset Delivery (CSV, XML, Excel)</li>
+          <li>Creative Campaign Execution (EPK, one-sheets, reels)</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="project" style="max-height:200px;overflow-y:auto;">
+        <h3>The Beat Mob – Label Infrastructure Build</h3>
+        <p>Designed, launched, and managed a metadata-ready cataloging system for beat sales and artist deliveries. Included publishing integration, tag sheets, and project archiving.</p>
+        <h3>Independent Artist Rollouts</h3>
+        <p>Supported multiple underground artists with release strategy, metadata entry, audio mastering, cover art development, and delivery to distributors including DistroKid and TuneCore.</p>
+        <h3>Metadata Quality Control & Label Credit Fixes</h3>
+        <p>Performed manual QC on dozens of legacy music projects to correct metadata inconsistencies, ensure proper ISRC/UPC formatting, and improve searchability across platforms.</p>
+        <h3>Archival & Organization for Legacy Catalogs</h3>
+        <p>Reorganized an extensive back catalog into clearly labeled metadata folders, file formats, and asset types to create DSP-ready packages and backup archives.</p>
+      </div>
+    </section>
+    <section>
+      <h2>Video Reel</h2>
+      <div class="video-scroll">
+        <iframe src="https://www.youtube.com/embed/xG6tUnYBqg0?list=PLbLNRJuyKEtwDg7k5yOeKTY72EqhQAZDV&index=24" title="Ceasa Matic - BeatBox (Lyric Video)" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/0DGADsD46X0?si=ewDWO-4JseEp9W9W" title="Ceasa Matic - Few Bucks (Latest Video for Ceasa)" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/GJr4vVxWAhc?si=cb19Q4FK7j1jGHNR" title="PC Zeus - Godly Flow (Motion Graphic)" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/seUA_PtUON0?list=PLbLNRJuyKEtwDg7k5yOeKTY72EqhQAZDV&index=28&pp=gAQBiAQB8AUB" title="Ceasa Matic - Been on My Grind (Lyric Motion Graphic/Video)" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/6fgj7sWcibQ?list=PLbLNRJuyKEtwDg7k5yOeKTY72EqhQAZDV&index=29&pp=gAQBiAQB8AUB" title="Ceasa Matic - Heavyweight (Visualizer)" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/bWVs764KUTM?list=PLbLNRJuyKEtwDg7k5yOeKTY72EqhQAZDV" title="Ceasa Matic - For the Money (Visualizer)" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section>
+      <h2>Graphic Showcase</h2>
+      <div class="video-scroll">
+        <img src="https://raw.githubusercontent.com/TheBeatMobMedia/TheBeatMobMedia/main/images/GRAPHIC1.png" alt="Graphic 1">
+        <img src="https://raw.githubusercontent.com/TheBeatMobMedia/TheBeatMobMedia/main/images/GRAPHIC2.png" alt="Graphic 2">
+        <img src="https://raw.githubusercontent.com/TheBeatMobMedia/TheBeatMobMedia/main/images/GRAPHIC3.png" alt="Graphic 3">
+        <img src="https://raw.githubusercontent.com/TheBeatMobMedia/TheBeatMobMedia/main/images/GRAPHIC4.png" alt="Graphic 4">
+      </div>
+    </section>
+    <section>
+      <h2>Testimonials</h2>
+      <div class="project" style="max-height:200px;overflow-y:auto;">
+        <p><strong>"Structures our releases flawlessly and optimized metadata for max discoverability."</strong><br>— Label Coordinator</p>
+        <p><strong>"His metadata strategy boosted our streaming numbers by 30% within two weeks."</strong><br>— Independent Artist</p>
+        <p><strong>"An absolute perfectionist. Nothing leaves his desk without being 100% correct."</strong><br>— Label A&R</p>
+        <p><strong>"Working with BZ was a game-changer: our catalog audits have never been smoother."</strong><br>— Digital Asset Manager</p>
+      </div>
+    </section>
+    <section>
+      <h2>Contact</h2>
+      <div class="project">
+        <p><span class="icon">✉</span>Email: <a href="mailto:bjutz89@gmail.com">bjutz89@gmail.com</a></p>
+      </div>
+    </section>
+    <div class="button-bar">
+      <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark-mode')">☯</button>
+      <a href="resume.pdf" download>Download Resume</a>
+    </div>
+  </main>
+  <footer>
+    © 2025 Brian "BZ" Jutz. All rights reserved.
+  </footer>
+  <script>
+    document.querySelectorAll('.dark-mode-toggle').forEach(btn => {
+      btn.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
+    });
+  </script>
+</body>
+</html>
