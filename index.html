@@ -22,10 +22,6 @@
       color: var(--dark);
       transition: background 0.3s ease, color 0.3s ease;
     }
-    body.dark-mode {
-      background: #0e0e0e;
-      color: #f5f5f5;
-    }
     header {
       font-family: 'Inter', sans-serif;
       background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -36,10 +32,6 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.2);
       position: relative;
       animation: fadeInDown 1s ease forwards;
-    }
-    header:hover {
-      transform: scale(1.02);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
     }
     header img {
       width: 100px;
@@ -135,19 +127,48 @@
     .button-bar button:hover,
     .button-bar a:hover { transform: translateY(-2px); background: var(--secondary); }
     footer { text-align: center; padding: 1rem; background: var(--primary); color: #fff; }
+
+    .progress-bar-section {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .progress-bar {
+      background-color: #eee;
+      border-radius: 10px;
+      height: 30px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .progress {
+      background-color: #4CAF50;
+      height: 100%;
+      text-align: left;
+      line-height: 30px;
+      padding-left: 10px;
+      color: white;
+      border-radius: 10px;
+      transition: width 0.3s ease-in-out;
+    }
+
+    .progress-bar .progress.warning {
+      background-color: orange;
+    }
+
+    .progress-bar .progress.danger {
+      background-color: red;
+    }
+
   </style>
 </head>
 <body>
   <header>
-    <img src="THEBEATMOBLOGOFINAL.png" alt="The Beat Mob Logo">
+    <img src="https://raw.githubusercontent.com/TheBeatMobMedia/TheBeatMobMedia/main/Transparent%20Before%20After%20TBM%20Logo%20(1).png?raw=true" alt="The Beat Mob Logo">
     <h1>Brian "BZ" Jutz</h1>
-    <p><span class="role">Metadata Expert</span> | <span class="role">Creative Strategist</span> | <span class="role">Digital Asset Architect</span></p>
+    <p>Metadata Expert | Creative Strategist | Digital Asset Architect</p>
   </header>
   <main>
-    <div class="button-bar">
-      <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark-mode')">☯</button>
-      <a href="resume.pdf" download>Download Resume</a>
-    </div>
     <section>
       <h2>About Me</h2>
       <div class="project">
@@ -167,6 +188,21 @@
           <li>Catalog Management & Asset Delivery (CSV, XML, Excel)</li>
           <li>Creative Campaign Execution (EPK, one-sheets, reels)</li>
         </ul>
+      </div>
+    </section>
+    <section>
+      <h2>Projects In Progress</h2>
+      <div class="progress-bar">
+        <div class="progress" style="width: 65%;">1. Wrapping up recording for local album project (65%)</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 25%;">2. Video Shoot for another local artist (25%)</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 75%;">3. Ghostwriting for Pop artist (75%)</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" style="width: 85%;">4. Finishing social media roll out for client new release (85%)</div>
       </div>
     </section>
     <section>
@@ -216,20 +252,15 @@
       <h2>Contact</h2>
       <div class="project">
         <p><span class="icon">✉</span>Email: <a href="mailto:bjutz89@gmail.com">bjutz89@gmail.com</a></p>
+        <p><span class="icon">📞</span>Phone: (502) 631-7091</p>
       </div>
     </section>
     <div class="button-bar">
-      <button class="dark-mode-toggle" onclick="document.body.classList.toggle('dark-mode')">☯</button>
       <a href="resume.pdf" download>Download Resume</a>
     </div>
   </main>
   <footer>
     © 2025 Brian "BZ" Jutz. All rights reserved.
   </footer>
-  <script>
-    document.querySelectorAll('.dark-mode-toggle').forEach(btn => {
-      btn.addEventListener('click', () => document.body.classList.toggle('dark-mode'));
-    });
-  </script>
 </body>
 </html>
